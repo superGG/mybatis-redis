@@ -11,7 +11,7 @@
                         http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd">
 	
 	<!-- 自动扫描，以完成Bean创建和自动依赖注入的功能 -->
-	<context:component-scan base-package="dao" />
+	<context:component-scan base-package="com.kellan.dao" />
 	<!-- 引入配置文件 -->
 	
 	<bean id="propertyConfigurer"
@@ -41,7 +41,7 @@
 	<!-- spring和MyBatis完美整合，不需要mybatis的配置映射文件 -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		<property name="typeAliasesPackage" value="entity"></property> 
+		<property name="typeAliasesPackage" value="com.kellan.entity"></property> 
 		<property name="configLocation" value="classpath:mybatis-config.xml"></property>
 		<!-- 自动扫描mapping.xml文件 -->
 		<property name="mapperLocations" value="classpath:mapping/*.xml"></property>
@@ -49,7 +49,7 @@
 	
 	<!-- DAO接口所在包名，Spring会自动查找其下的类 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="dao" />
+		<property name="basePackage" value="com.kellan.dao" />
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
 	</bean>
 	

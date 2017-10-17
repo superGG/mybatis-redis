@@ -1,8 +1,8 @@
-package service;
+package com.kellan.service;
 
 import java.util.List;
 
-import entity.User;
+import com.kellan.entity.User;
 
 public interface UserService {
 	

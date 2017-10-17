@@ -1,4 +1,4 @@
-package controller;
+package com.kellan.controller;
 
 import java.util.List;
 
@@ -8,8 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import entity.User;
-import service.UserService;
+import com.kellan.entity.User;
+import com.kellan.service.UserService;
 
 @Controller
 @RequestMapping(value ="/user")

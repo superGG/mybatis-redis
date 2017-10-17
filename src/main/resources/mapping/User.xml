@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="dao.UserDao">
-	<insert id="addUser" parameterType="entity.User">
+<mapper namespace="com.kellan.dao.UserDao">
+	<insert id="addUser" parameterType="com.kellan.entity.User">
 		<selectKey resultType="java.lang.Short" order="AFTER" keyProperty="id">
 			SELECT LAST_INSERT_ID() AS id
 		</selectKey>
 		insert into user(name) values (#{name})
 	</insert>
-	<select id="queryUserById" parameterType="entity.User" resultType="entity.User" flushCache="true">
+	<select id="queryUserById" parameterType="com.kellan.entity.User" resultType="com.kellan.entity.User" flushCache="true">
 		select id, name from user where id = #{id}
 	</select>
-	<select id="queryAll" resultType="entity.User" flushCache="true">
+	<select id="queryAll" resultType="com.kellan.entity.User" flushCache="true">
 		select id, name from user;
 	</select>
 	<delete id="deleteUser" parameterType="java.lang.Integer" >
 		delete from user where id = #{id}
 	</delete>
-	<update id="updateUser" parameterType="entity.User">
+	<update id="updateUser" parameterType="com.kellan.entity.User">
 		update user set name=#{name} where id=#{id}
 	</update>
 </mapper>

@@ -11,9 +11,9 @@
                         http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd">
 	
 	<!-- 自动扫描该包，使SpringMVC认为包下用了@controller注解的类是控制器 -->
-	<context:component-scan base-package="controller" />
-    <context:component-scan base-package="service.impl"/>
-    <context:component-scan base-package="dao"/>
+	<context:component-scan base-package="com.kellan.controller" />
+    <context:component-scan base-package="com.kellan.service.impl"/>
+    <context:component-scan base-package="com.kellan.dao"/>
     <mvc:annotation-driven />
 	
 	

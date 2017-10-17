@@ -1,4 +1,4 @@
-package service.impl;
+package com.kellan.service.impl;
 
 import java.util.List;
 
@@ -6,9 +6,9 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
-import dao.UserDao;
-import entity.User;
-import service.UserService;
+import com.kellan.dao.UserDao;
+import com.kellan.entity.User;
+import com.kellan.service.UserService;
 
 @Service("userService")
 public class UserServiceImpl implements UserService {

@@ -1,4 +1,4 @@
-package entity;
+package com.kellan.entity;
 
 public class User {
 	

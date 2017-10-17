@@ -1,8 +1,8 @@
-package dao;
+package com.kellan.dao;
 
 import java.util.List;
 
-import entity.User;
+import com.kellan.entity.User;
 
 public interface UserDao {
 	

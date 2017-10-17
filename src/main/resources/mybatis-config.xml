@@ -4,6 +4,8 @@
     "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <settings>
+    	<!-- 开启缓存 -->
+    	<setting name="cacheEnabled" value="true" />
         <!-- 打印查询语句 -->
         <setting name="logImpl" value="STDOUT_LOGGING" />
     </settings>
