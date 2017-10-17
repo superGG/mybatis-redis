@@ -5,13 +5,13 @@
 		<selectKey resultType="java.lang.Short" order="AFTER" keyProperty="id">
 			SELECT LAST_INSERT_ID() AS id
 		</selectKey>
-		insert into user(name) values (#{name})
+		insert into user(name) values (#{name},#{password},#{createTime},#{image})
 	</insert>
 	<select id="queryUserById" parameterType="com.kellan.entity.User" resultType="com.kellan.entity.User" flushCache="true">
-		select id, name from user where id = #{id}
+		select * from user where id = #{id}
 	</select>
 	<select id="queryAll" resultType="com.kellan.entity.User" flushCache="true">
-		select id, name from user;
+		select *from user;
 	</select>
 	<delete id="deleteUser" parameterType="java.lang.Integer" >
 		delete from user where id = #{id}
