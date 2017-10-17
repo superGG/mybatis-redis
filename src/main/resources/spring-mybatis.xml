@@ -11,14 +11,15 @@
                         http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd">
 	
 	<!-- 自动扫描，以完成Bean创建和自动依赖注入的功能 -->
-	<context:component-scan base-package="com.kellan.dao" />
-	<!-- 引入配置文件 -->
+	<context:component-scan base-package="com.kellan.*" />
 	
+	<!-- 引入配置文件 -->	
 	<bean id="propertyConfigurer"
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="location" value="classpath:jdbc.properties" />
 	</bean>
 
+	<!-- 设置数据源 -->
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
 		<property name="driverClassName" value="${driver}" />
