@@ -1,9 +1,11 @@
 package com.kellan.controller;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.annotation.Resource;
 
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -17,6 +19,9 @@ public class UserController {
 	
 	@Resource
 	private UserService userService;
+	
+	@Resource
+    private RedisTemplate<Serializable, Serializable> redisTemplate;
 
 	@RequestMapping(value="/getUserById")
 	@ResponseBody

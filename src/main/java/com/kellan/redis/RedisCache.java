@@ -24,11 +24,9 @@ public class RedisCache implements Cache {
 
 	private ReadWriteLock readWriteLock = new ReentrantReadWriteLock();
 
-	// @Resource
-	// private static JedisConnectionFactory jedisConnectionFactory;
-
+	
 	@Resource
-	private RedisTemplate<Serializable, Serializable> redisTemplate;  
+    private RedisTemplate<Serializable, Serializable> redisTemplate;
     
 	private JdkSerializationRedisSerializer jdkSerializer = new JdkSerializationRedisSerializer(); 
 
